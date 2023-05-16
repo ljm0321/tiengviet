@@ -99,7 +99,12 @@ const HeaderNote: React.FC<Props> = ({activeIndex}) => {
                 </Nav>
             </NavList>
             <UserIcon>
-                <BiUserCircle />
+                <Link  
+                    className={
+                        activeIndex === 2 ? "active" : ""
+                    } 
+                    href="/user" onClick={() => navHandler(activeIndex)}><BiUserCircle />
+                </Link>
             </UserIcon>
         </Base>
     )

@@ -15,7 +15,7 @@ const Utterances: React.FC = () => {
         scriptEl.setAttribute('theme', `github-light`);
         scriptEl.setAttribute('label', 'comment');
     
-        commentsRef.current?.appendChild(scriptEl);
+        commentsRef.current?.replaceChildren(scriptEl);
     }, [router.query]);
     
     return (

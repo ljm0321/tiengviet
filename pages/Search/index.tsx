@@ -8,7 +8,6 @@ const Base = styled.div<{imageUrl: string}>`
 `;
 
 const Search: React.FC = () => {
-    
     return (
         <Base imageUrl={'/assets/tiengviet_main.jpg'}>
             <h4>Search</h4>
