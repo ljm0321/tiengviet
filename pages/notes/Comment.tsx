@@ -15,10 +15,12 @@ const Utterances: React.FC = () => {
         scriptEl.setAttribute('theme', `github-light`);
         scriptEl.setAttribute('label', 'comment');
     
-        commentsRef.current?.replaceChildren(scriptEl);
+        commentsRef.current?.appendChild(scriptEl);
     }, [router.query]);
     
-    return <section ref={commentsRef} />;
+    return (
+        <><section ref={commentsRef} /></>
+    )
 };
 
 export default Utterances;

@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import React from "react";
 import { getNoteList } from '../../lib/importNote';
-import {BsArrowRight} from 'react-icons/Bs';
+import {AiOutlineArrowRight} from 'react-icons/ai';
 import { NoteData } from "@/types/note";
 
 
@@ -107,7 +107,7 @@ const Notes = ({noteData} : {noteData: NoteData[]}) => {
                                 <Date>{date}</Date>
                                 <Title>{title}</Title>
                                 <Subtitle>{subtitle}</Subtitle>
-                                <More>More<BsArrowRight /></More>
+                                <More>More<AiOutlineArrowRight /></More>
                         </Link>
                     </NoteItem>
                 ))}
