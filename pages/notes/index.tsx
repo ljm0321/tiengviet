@@ -23,7 +23,7 @@ const Base = styled.div<{imageUrl: string}>`
     padding-top: 70px;
     background: url(${({imageUrl}) => imageUrl}) center center;
     background-size: 100% auto;
-    color: white;
+    color: #f2f2f2;
 `;
 
 const NoteList = styled.div`
