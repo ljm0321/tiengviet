@@ -86,14 +86,6 @@ const Content = function({noteData} : {noteData: NoteData}) {
 
     const [noteLength, setNoteLength] = useState<number>(Number(router.query.noteLength));
 
-    const prevNoteLengthRef = useRef<number>(Number(router.query.noteLength));
-
-    useEffect(() => {
-        prevNoteLengthRef.current = noteLength;
-    }, [noteLength]);
-
-    const prevNoteLength = prevNoteLengthRef.current;
-
     if (router.isFallback) {
         return <div>Loading...</div>
     }
@@ -112,7 +104,7 @@ const Content = function({noteData} : {noteData: NoteData}) {
                 </NoteContent>
                 <NoteNav>
                     <Next>
-                        {Number(noteData.fileIndex) < prevNoteLength ? (
+                        {Number(noteData.fileIndex) < noteLength ? (
                             <Link href={`/notes/note${Number(noteData.fileIndex)+1}`}>다음글</Link>
                         ) : (
                             ''
