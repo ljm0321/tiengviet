@@ -31,7 +31,7 @@ export async function getNoteData(id: string) {
     
     const contentHtml = processedContent.toString();
 
-    const fileIndex = id.slice(-1);
+    const fileIndex = id.replace('note', '');
 
     return {
         id,
